@@ -1620,7 +1620,7 @@ public class NfcService implements DeviceHostListener {
         public boolean deviceSupportsNfcSecure() {
             String skuList[] = mContext.getResources().getStringArray(
                 R.array.config_skuSupportsSecureNfc);
-            String sku = SystemProperties.get("ro.boot.hardware.sku");
+            String sku = SystemProperties.get("ro.boot.product.hardware.sku");
             if (TextUtils.isEmpty(sku) || !ArrayUtils.contains(skuList, sku)) {
                 return false;
             }
